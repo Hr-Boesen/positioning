@@ -1,0 +1,199 @@
+/* 
+1.
+static
+Chrome -> computed -> search for position 
+position should be static as default
+-> static means follow the other elements 
+in the document flow 
+One, two, three 
+
+
+
+
+*/
+
+.parent {
+
+}
+
+.child-one {
+
+}
+
+.child-two {
+
+}
+
+.child-three {
+
+}
+
+/* 
+2.
+Relative position
+Nothing changes when you look 
+at the styling. Because relative 
+position works exactly the same way 
+as static position. 
+But the difference is that you can 
+change the top, right, left and bottom. 
+
+left: 10px; 
+moves the element 10px;
+
+top: 10px;
+Takes the element out of the 
+document flow
+You would normally not use position 
+relative and top, left, right bottom, because 
+is moves it out of the document flow, and it becomes 
+really diffucult to style things around it.
+
+
+
+
+*/
+
+.parent {
+
+}
+
+.child-one {
+position: relative; /*1*/
+left: 10px; /*2*/
+top: 10px; /*2*/
+}
+
+.child-two {
+
+}
+
+.child-three {
+
+}
+
+/* 
+3.
+absolute position
+
+Things has changed drastically, it just pretend that 
+the element is completely deleted. 
+This is used when you want to stick something in a fixed 
+position, but you do not want anything to move around it. 
+top: 0; positions the element to the absolute top of the 
+screen. 
+
+position: relative; 3 -> if you want the absolute 
+position to work inside an element, you need to change the
+parent element to relative.  
+
+
+*/
+
+.parent {
+position: relative; /*3*/
+
+}
+
+.child-one {
+position: absolute; /*1*/
+top: 0; /*2*/
+
+}
+
+.child-two {
+
+}
+
+.child-three {
+
+}
+
+/* 
+4.
+fixed
+position: fixed; 
+complete ignores the parent element and moves 
+all the way to the top. 
+
+
+height: 200vh;
+They stay in the same position when it scrools 
+The difference between fixed and absolute is, that 
+the element stays when you scrool with fixed. 
+
+ 
+
+
+*/
+
+.parent {
+    position: relative; /*3*/
+    height: 200vh;
+    
+    }
+    
+    .child-one {
+    position: fixed; /*1*/
+    top: 0;
+    
+    }
+    
+    .child-two {
+    
+    }
+    
+    .child-three {
+    
+    }
+
+/* 
+5.
+sticky is a combination of relative and fixed position. 
+
+ 
+
+*/
+
+.parent {
+    position: relative; /*3*/
+    height: 200vh;
+    
+    }
+    
+    .child-one {
+    position: sticky; /*1*/
+    top: 0;
+    
+    }
+    
+    .child-two {
+    
+    }
+    
+    .child-three {
+    
+    }
+
+
+    .parent {
+        padding: 5px;
+        background-color: #00AAFF;
+      }
+      
+      .child {
+        padding: 5px;
+      }
+      
+      .child-one {
+        background-color: rgb(116, 255, 116);
+      }
+      
+      .child-two {
+        background-color: rgb(248, 117, 117);
+      }
+      
+      .child-three {
+        background-color: rgb(255, 116, 232);
+      }
+
